@@ -1,0 +1,13 @@
+
+function onChangeToRandomCategory() {
+const categoryList = ['Lunch', 'Dinner', 'Sushi', 'Vegetarian', 'Desserts'];
+
+const randomCategory = categoryList[Math.floor(Math.random() * categoryList.length)];
+window.location.href = /menu/${randomCategory};
+}
+function renderMenuItems() {
+    const category = window.location.pathname.split('/')[2];
+    const menu = getMenuItemsForCategory(category);
+    <a href="#" onclick="$dc.loadMenuItems({{randomCategoryShortName}});"></a>
+   
+    }
